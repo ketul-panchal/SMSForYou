@@ -1,0 +1,123 @@
+/* Chat Container */
+.chat-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #1f1f1f; /* Dark background */
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    color: white;
+    font-family: "Arial", sans-serif;
+}
+
+/* Chat Title */
+.chat-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f8b400; /* Yellow Accent */
+}
+
+/* Chat Box */
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 15px;
+    background: #252525;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Messages */
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    margin: 5px 0;
+    max-width: 75%;
+    border-radius: 10px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+/* User's Message (Right Side) */
+.message.self {
+    align-self: flex-end;
+    background: #007bff;
+    color: white;
+    text-align: right;
+}
+
+/* Other Users' Messages (Left Side) */
+.message.other {
+    align-self: flex-start;
+    background: #333;
+    color: white;
+}
+
+/* Message User Label */
+.message-user {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* Message Input Section */
+.chat-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Input Fields */
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: white;
+}
+
+/* Username Input */
+.username-input {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Message Input */
+.message-input {
+    flex: 1;
+}
+
+/* Send Button */
+.send-button {
+    background: #f8b400;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.send-button:hover {
+    background: #e09e00;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 90%;
+    }
+    .chat-box {
+        height: 350px;
+    }
+}
