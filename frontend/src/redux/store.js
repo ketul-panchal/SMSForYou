@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import chatReducer from "./chatReducer";
-import { thunk } from "redux-thunk"; // ✅ Use named import
+import { thunk } from "redux-thunk"; 
 
 const store = configureStore({
     reducer: chatReducer,
