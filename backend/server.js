@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*", // Allow all origins (change this for security)
+        origin: "*", 
         methods: ["GET", "POST"]
     }
 });
@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
         const chatMessage = new Chat({ username: data.username, message: data.message });
         await chatMessage.save();
 
-        io.emit('receiveMessage', chatMessage); // Broadcast to all clients
+        io.emit('receiveMessage', chatMessage); 
     });
 
     socket.on('disconnect', () => {
@@ -57,6 +57,6 @@ io.on('connection', (socket) => {
     });
 });
 
-// Start Server
+
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
